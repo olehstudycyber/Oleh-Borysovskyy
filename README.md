@@ -41,4 +41,7 @@
 <h2>📬 Contact Me</h2>
 
 * **Email:** [oborysovskyy@gmail.com](mailto:oborysovskyy@gmail.com)
-* 
+* **LinkedIn:** [Oleh Borysovskyy LinkedIn](https://www.linkedin.com/in/oleh-borysovskyy-a2a65152/)
+* **Twitter:** [@OlehBorysovskyy](https://twitter.com/OlehBorysovskyy) (if available)
+* **GitHub:** [@olehstudycyber](https://github.com/olehstudycyber)
+* **Personal Website:** [www.olehborysovskyy.com](http://www.olehborysovskyy.com) (if available)
