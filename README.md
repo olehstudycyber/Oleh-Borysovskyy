@@ -6,17 +6,26 @@
 ## 🔥 About Me  
 - 💻 Transitioning into cybersecurity with hands-on experience in penetration testing.  
 - 🛡️ Running a **physical cybersecurity home lab** to simulate real-world security scenarios.  
-- 🎯 Passionate about **network security, Active Directory, and incident response**.  
+- 🎯 Passionate about **network security, Active Directory, and incident response**.
+## 🚀 Cybersecurity Home Lab  
+🔸 **Pentesting Setup**: Kali Linux attacking Windows Server 2025  
+🔸 **Active Directory** installed & secured  
+🔸 **Network Monitoring** (future IDS/SIEM setup planned)  
 
-<h2>👨‍💻 Physical Cybersecurity Lab:</h2>
-
-* **Physical Lab Penetration Testing:**
+## 📌 Pinned Projects  
+🔹 **[CyberLab001](https://github.com/olehstudycyber/CyberLab001)** – Cybersecurity Home Lab Setup  
+🔹 **[Pentest-Reports](https://github.com/olehstudycyber/Pentest-Reports)** – Documented penetration tests  
+🔹 **[Windows Server Security](https://github.com/olehstudycyber/Windows-Server-Security)** – Hardening Windows Server  
+- ## 🚀 Cybersecurity Physical Home Lab  
+🔸 **Pentesting Setup**: Kali Linux attacking Windows Server 2025  
+🔸 **Active Directory** installed & secured  
+🔸 **Network Monitoring** (future IDS/SIEM setup planned)  
     * **[Build Server (Hardware Requirements)](BUILD_SERVER.md)** - Detailed description of the build server setup.
     * **Lab Setup:**
-        * 🖥️ **Attacker Machine:** Kali Linux (Dell Laptop) - `192.168.1.10`
-        * 🏴 **Target Machine:** Windows Server 2025 - `192.168.1.2`
-        * 🌐 **Networking:** Netgear Router, Static IPs
-        * 🛠️ **Security Tools:** Nmap, Metasploit, Wireshark, Snort
+      -  * 🖥️ **Attacker Machine:** Kali Linux (Dell Laptop) - `x.x.x.x`
+       - * 🏴 **Target Machine:** Windows Server 2025 - `x.x.x.x`
+       - * 🌐 **Networking:** Netgear Router, Static IPs
+       - * 🛠️ **Security Tools:** Nmap, Metasploit, Wireshark, Snort
     * [Active Directory Bulk User Creation](Link to project if available)
     * Cisco Packet Tracer: Used for network diagram creation and simulation.
     * **Description:** This lab allows me to practice penetration testing in a controlled environment, testing various security tools and techniques.
@@ -33,8 +42,6 @@
 
 <h2>Certificates</h2>
 
-* [Prep for passing ComTia Security+ exam](link to documents or projects)
-* **Description:** This section showcases my commitment to continuous learning and certification in cybersecurity.
 
 <h2>📺 Popular YouTube Videos</h2>
 
