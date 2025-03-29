@@ -1,10 +1,12 @@
-# Oleh-Borysovskyy
+# 👨‍💻 Oleh Borysovskyy  
 
-<h1>Hi, I'm Oleh! <br/>🔹Passionate about cybersecurity, ethical hacking, and penetration testing! I’m building a hands-on Cybersecurity Home Lab to develop real-world security skills. Currently studying for CompTIA Security+ and expanding my expertise in network security, Active Directory, and penetration testing.</h1>
+🔹 **Cybersecurity Enthusiast | Penetration Tester | Security Researcher**  
+🔹 **Google Cybersecurity Certificate | Studying CompTIA Security+**  
 
-![Profile Banner](link_to_banner_image)
-
-![Profile Picture](link_to_profile_picture)
+## 🔥 About Me  
+- 💻 Transitioning into cybersecurity with hands-on experience in penetration testing.  
+- 🛡️ Running a **physical cybersecurity home lab** to simulate real-world security scenarios.  
+- 🎯 Passionate about **network security, Active Directory, and incident response**.  
 
 <h2>👨‍💻 Physical Cybersecurity Lab:</h2>
 
