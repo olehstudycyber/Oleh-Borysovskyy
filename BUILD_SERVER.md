@@ -1,0 +1,36 @@
+# Build Server Detailed Description
+
+## Hardware Requirements
+- CPU: Intel Core i7 or equivalent
+- RAM: 16GB or higher
+- Storage: 256GB SSD or higher
+- Network: Gigabit Ethernet
+
+## Lab Setup
+### Attacker Machine
+- **OS:** Kali Linux
+- **Hardware:** Dell Laptop
+- **IP Address:** `192.168.1.10`
+
+### Target Machine
+- **OS:** Windows Server 2025
+- **IP Address:** `192.168.1.2`
+
+### Networking
+- **Router:** Netgear Router
+- **IP Configuration:** Static IPs
+
+### Security Tools
+- **Nmap:** Network scanning tool
+- **Metasploit:** Penetration testing framework
+- **Wireshark:** Network protocol analyzer
+- **Snort:** Intrusion detection system
+
+## Step-by-Step Guide
+1. **Set up the hardware.**
+2. **Install the operating systems on the attacker and target machines.**
+3. **Configure the network settings on the router and machines.**
+4. **Install and configure the security tools.**
+5. **Begin penetration testing and security analysis.**
+
+[Back to README](README.md)
