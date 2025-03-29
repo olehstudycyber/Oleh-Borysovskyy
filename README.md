@@ -12,7 +12,9 @@
 - **Attack Machine:** Kali Linux 2024.2 (Dell laptop)  
 - **Target:** Windows Server 2025 (AD Installed, SSH Enabled)  
 - **Network:** Isolated with Netgear router (192.168.1.0/24) 
-- **[Build Server (Hardware Requirements)](BUILD_SERVER.md)** - Detailed description of the build server setup. 
+- **[Build Server (Hardware Requirements)](BUILD_SERVER.md)** - Detailed description of the build server setup.
+- ## Cybersecurity Home Lab - Physical Lab Penetration Testing
+For detailed information on the physical lab penetration testing setup and process, refer to the [Physical Lab Penetration Testing Documentation](PHYSICAL_LAB.md).
 
 📌 **Current Projects:**  
 ✅ **Penetration Testing:** Scanning & Exploitation Practice  
