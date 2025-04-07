@@ -4,6 +4,23 @@
 🔹 **Google Cybersecurity Certificate | Studying CompTIA Security+**  
 🔹 **Building a hands-on cybersecurity home lab to develop real-world security skills**  
 
+## Areas of Focus & Skills
+
+* Network Security: Firewall configuration, intrusion detection/prevention systems (IDS/IPS), network segmentation.
+* Windows Security: Server hardening, Active Directory security, Group Policy management, Sysmon.
+* Threat Detection & Analysis: SIEM (Security Onion), log analysis, understanding common attack vectors.
+* Pentesting (Lab Environment): Vulnerability scanning, basic exploitation techniques.
+* Scripting: PowerShell, Bash (basic).
+
+## Featured Projects
+
+Check out some of my key projects demonstrating my skills:
+
+* **[Cybersecurity-Home-Lab](https://github.com/olehstudycyber/Cybersecurity-Home-Lab):** My central repository documenting the architecture and core setup of my home cybersecurity lab.
+* **[AD-Security-Lab](https://github.com/olehstudycyber/AD-Security-Lab):** Demonstrates my practical experience in securing an Active Directory environment, including GPO implementation and user management.
+* **[Network-Monitoring-Lab](https://github.com/olehstudycyber/Network-Monitoring-Lab):** Details my setup and configuration of Security Onion for network traffic analysis and threat detection.
+* **[Pentesting-Practice](https://github.com/olehstudycyber/Pentesting-Practice):** Showcases my journey in learning penetration testing methodologies and tools within a controlled lab.
+* **[Windows-Server-Hardening](https://github.com/olehstudycyber/Windows-Server-Hardening):** Documents the steps I've taken to secure a Windows Server 2025 instance, including Sysmon configuration and security policies.
 ---
 
 ## 🔥 Cybersecurity Home Physical Lab  
