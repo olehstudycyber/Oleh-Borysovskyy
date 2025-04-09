@@ -42,7 +42,7 @@ For detailed information on the physical lab penetration testing setup and proce
 I'm actively documenting my hands-on learning and progress towards the CompTIA Security+ (SY0-701) certification in a dedicated repository:
 
 
-👉 [View My Security+ Lab Tracker](https://github.com/olehstudycyber/securityplus-lab-tracker/blob/main/SECURITYPLUS_LAB_TRACKER.md)
+👉 [View My Security+ Lab Tracker](https://github.com/olehstudycyber/Oleh-Borysovskyy/blob/main/SECURITYPLUS_LAB_TRACKER.md)
 This repository contains my lab tracker, detailing the Security+ exam objectives I'm covering, the tools I'm using, and links to the detailed documentation of each completed lab.
 
 ### Featured Security+ Labs (Examples - Update with your best labs)
