@@ -37,6 +37,20 @@ For detailed information on the physical lab penetration testing setup and proce
 ✅ **Penetration Testing:** Scanning & Exploitation Practice  
 ✅ **Windows Active Directory Security:** Configuring Group Policies & Hardening  
 ✅ **SIEM & IDS Setup (Planned):** Exploring lightweight log monitoring solutions  
+# 🛡️ CompTIA Security+ Lab Journey
+
+I'm actively documenting my hands-on learning and progress towards the CompTIA Security+ (SY0-701) certification in a dedicated repository:
+
+
+👉 [View My Security+ Lab Tracker](https://github.com/olehstudycyber/securityplus-lab-tracker/blob/main/SECURITYPLUS_LAB_TRACKER.md)
+This repository contains my lab tracker, detailing the Security+ exam objectives I'm covering, the tools I'm using, and links to the detailed documentation of each completed lab.
+
+### Featured Security+ Labs (Examples - Update with your best labs)
+
+* 🔍 [Analyzing System Events with Sysmon](https://github.com/olehstudycyber/securityplus-lab-tracker/blob/main/labs/detection/sysmon-analysis.md)
+* 💥 [Exploiting a Vulnerability with Metasploit](https://github.com/olehstudycyber/securityplus-lab-tracker/blob/main/labs/exploitation/metasploit-cve.md)
+* 🌐 [Performing Network Reconnaissance with Nmap](https://github.com/olehstudycyber/securityplus-lab-tracker/blob/main/labs/recon/nmap-scan.md)
+
 
 ---
 
