@@ -42,11 +42,6 @@ For detailed information on the physical lab penetration testing setup and proce
 
 ## 📌 Pinned Projects  
 
-🔹 **[CyberLab001](https://github.com/olehstudycyber/CyberLab001)**  
-_A structured 5-day cybersecurity home lab setup guide with Windows Server, Kali Linux, and Active Directory._  
-
-🔹 **[Pentest-Reports](https://github.com/olehstudycyber/Pentest-Reports)**  
-_Real-world penetration testing reports documenting vulnerabilities and security findings._  
 
 🔹 **[Windows Server Security](https://github.com/olehstudycyber/Windows-Server-Security)**  
 _Guide to hardening Windows Server environments, focusing on AD security best practices._  
