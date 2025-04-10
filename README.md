@@ -1,65 +1,56 @@
-# 👨‍💻 Oleh Borysovskyy  
+# Cybersecurity Home Lab – Oleh Borysovskyy
 
-🔹 **Cybersecurity Enthusiast | Aspiring Penetration Tester**  
-🔹 **Google Cybersecurity Certificate | Studying CompTIA Security+**  
-🔹 **Building a hands-on cybersecurity home lab to develop real-world security skills**  
+Welcome to my cybersecurity home lab! This repository documents my hands-on experience with penetration testing, system hardening, and monitoring in a physical, isolated lab environment.
 
----
+## 🧠 Objective
 
-## 🧪 Featured Projects
-
-- 🔐 **[SECURITYPLUS_LAB_TRACKER.md](./SECURITYPLUS_LAB_TRACKER.md)** – Tracks Security+ domains and labs
-- ⚔️ **Physical Lab Penetration Testing** – Recon, Exploitation, and Detection in isolated lab
-- 🛡️ **Windows Server Hardening** – Sysmon, GPO, Defender, and more
-- 📊 **SIEM & IDS Setup (Planned)** – Wazuh and lightweight SIEM solutions
+To simulate real-world cybersecurity scenarios using a physical lab environment with Windows Server 2025, Kali Linux, Active Directory, and security tools like Wazuh SIEM and Sysmon.
 
 ---
 
-## 🏗️ Lab Setup
+## 🖥️ Lab Environment Overview
 
-| Role    | Machine            | OS                        |
-|---------|--------------------|---------------------------|
-| Target  | Windows Server 2025| AD + Sysmon               |
-| Admin   | Windows 11 Pro      | Remote AD Admin           |
-| Attacker| Kali Linux 2024.2   | Penetration Tester         |
-| Network | Netgear Router      | Isolated Subnet            |
-
-- Subnet: `192.168.1.0/24`  
-- Kali: `192.168.1.10`  
-- Server: `192.168.1.2`  
-- Router: `192.168.1.1`
+| Component          | Details                                      |
+|--------------------|----------------------------------------------|
+| **Attacker**       | Kali Linux 2024.2 (Dell laptop)              |
+| **Target**         | Windows Server 2025 (Build 25398, Buypower)  |
+| **Client**         | Windows 11 Pro (Remote access to server)     |
+| **Network**        | Isolated via Netgear Router (192.168.1.0/24) |
+| **SIEM/IDS**       | Wazuh (coming soon)                          |
+| **Tools**          | Nmap, Metasploit, Hydra, Sysmon, Windows Defender |
 
 ---
 
-## 🔗 Quick Access to Labs
+## 📁 Repository Structure
 
-- 🔎 [Nmap Scan (Recon)](./recon_logs/nmap-scan.md)
-- 💥 [Metasploit CVE (Exploitation)](./exploitation/metasploit-cve.md)
-- 🔍 [Sysmon Analysis (Detection)](./post_exploitation/sysmon-analysis.md)
-- 🧾 [Risk Assessment Report](./reports/risk-assessment.md)
+├── recon_logs/ # Nmap, Netdiscover, Enum4linux, etc. ├── exploitation/ # Exploit attempts, payloads, and PoCs ├── post_exploitation/ # Privilege escalation, persistence ├── SIEM_IDS/ # Wazuh config/logs (in progress) ├── hardening/ # Sysmon rules, audit policy, hardening notes ├── reports/ # Penetration testing reports └── SECURITYPLUS_LAB_TRACKER.md # Project progress tracker
 
----
-
-## 📘 Security+ Lab Tracker
-
-👉 **[View My Security+ Lab Tracker](./SECURITYPLUS_LAB_TRACKER.md)**  
-This file tracks the Security+ domains I’m covering, the tools I’m using, and links to detailed documentation of each lab.
-
-### 🔬 Featured Security+ Labs
-
-- 🔍 [Analyzing System Events with Sysmon](./post_exploitation/sysmon-analysis.md)
-- 💥 [Exploiting a Vulnerability with Metasploit](./exploitation/metasploit-cve.md)
-- 🌐 [Performing Network Reconnaissance with Nmap](./recon_logs/nmap-scan.md)
+yaml
+Copy
+Edit
 
 ---
 
-## 📌 Pinned Projects  
+## 🔧 Setup Highlights
 
-🔹 **[Windows Server Security](https://github.com/olehstudycyber/Windows-Server-Security)**  
-_Guide to hardening Windows Server environments, focusing on AD security best practices._  
+- **Windows Server 2025**: Active Directory enabled, Sysmon installed, Defender running
+- **Kali Linux**: Primary offensive machine
+- **Network**: Fully isolated lab, wired Ethernet (Cat 5)
+- **Security**: Lab is physically secured; no internet access
 
 ---
 
+## 🚧 In Progress
+
+- Wazuh SIEM deployment & log forwarding
+- Integration of IDS alerts with exploitation attempts
+- Documentation of full red team to blue team workflows
+
+---
+
+## 📄 License & Contributions
+
+This repository is for educational and personal development purposes only. Contributions are welcome v
 
 ## 📫 Let's Connect  
 
