@@ -1,79 +1,62 @@
-# 🛡️ CompTIA Security+ (SY0-701) Lab Tracker
+# 📊 CompTIA Security+ Lab Tracker (SY0-701)
 
-> Use this tracker to guide, document, and showcase your hands-on lab activities mapped to the Security+ exam objectives. Keep everything updated as you complete your labs!
-
----
-
-## ✅ Legend
-| Status       | Meaning                     |
-|--------------|-----------------------------|
-| 🔲 Not Started | Haven't started yet         |
-| 🟡 In Progress | Currently working on it     |
-| ✅ Completed   | Lab finished and documented |
+This tracker maps hands-on labs in my home cybersecurity lab to the CompTIA Security+ objectives. Each section links to lab documentation and tools used.
 
 ---
 
-## 🧩 Domain 1: General Security Concepts (12%)
+## Domain 1: Attacks, Threats, and Vulnerabilities
 
-| Task | Status | Tools Used | Lab Notes | Artifacts / GitHub Link |
-|------|--------|------------|-----------|-------------------------|
-| Install and configure Sysmon on Windows Server | 🔲 | Sysmon, Windows Server | | |
-| Monitor Windows Defender logs for threats | 🔲 | Windows Defender | | |
-| Install and configure Wazuh SIEM | 🔲 | Wazuh, Linux | | |
-| Simulate a malware infection and analyze logs | 🔲 | EICAR test file | | |
+| Lab | Status | Link |
+|-----|--------|------|
+| Network Reconnaissance | ✅ Complete | [nmap-scan.md](./recon_logs/nmap-scan.md)
+| Exploiting CVE via Metasploit | ✅ Complete | [metasploit-cve.md](./exploitation/metasploit-cve.md)
 
 ---
 
-## 🛠️ Domain 2: Threats, Vulnerabilities, and Mitigations (22%)
+## Domain 2: Architecture and Design
 
-| Task | Status | Tools Used | Lab Notes | Artifacts / GitHub Link |
-|------|--------|------------|-----------|-------------------------|
-| Perform Nmap and Nikto scans | 🔲 | Nmap, Nikto | | |
-| Run OpenVAS or Nessus vulnerability scans | 🔲 | OpenVAS / Nessus | | |
-| Launch a brute-force attack on test account | 🔲 | Hydra / Medusa | | |
-| Use Metasploit to exploit a test vulnerability | 🔲 | Metasploit | | |
-| Reproduce a recent CVE in lab | 🔲 | CVE, Kali Linux | | |
+| Lab | Status | Link |
+|-----|--------|------|
+| Risk Assessment & Documentation | ✅ Complete | [risk-assessment.md](./reports/risk-assessment.md)
 
 ---
 
-## 🏛️ Domain 3: Security Architecture (18%)
+## Domain 3: Implementation
 
-| Task | Status | Tools Used | Lab Notes | Artifacts / GitHub Link |
-|------|--------|------------|-----------|-------------------------|
-| Configure Active Directory (users, groups) | ✅ | Windows Server | | |
-| Implement Group Policy Objects (GPOs) | 🔲 | AD GPO | | |
-| Simulate lateral movement between users | 🔲 | Netcat, PowerShell | | |
-| Configure basic network segmentation | 🔲 | Router/VLAN/Subnets | | |
+| Lab | Status | Link |
+|-----|--------|------|
+| Active Directory Setup | ✅ Complete | [PHYSICAL_LAB.md](./PHYSICAL_LAB.md)
+| Group Policy Object (GPO) Configuration | ✅ Complete | Coming soon
 
 ---
 
-## 🔄 Domain 4: Security Operations (28%)
+## Domain 4: Operations and Incident Response
 
-| Task | Status | Tools Used | Lab Notes | Artifacts / GitHub Link |
-|------|--------|------------|-----------|-------------------------|
-| Centralize logs into Wazuh SIEM | 🔲 | Wazuh | | |
-| Simulate phishing attack in lab | 🔲 | Custom email + payload | | |
-| Perform patch management for Windows Server | 🔲 | WSUS / manual updates | | |
-| Analyze network traffic with Wireshark | 🔲 | Wireshark | | |
+| Lab | Status | Link |
+|-----|--------|------|
+| Sysmon & Windows Defender Detection | ✅ Complete | [sysmon-analysis.md](./post_exploitation/sysmon-analysis.md)
+| SIEM Setup (Wazuh) | 🚧 In Progress | Coming soon
 
 ---
 
-## 📋 Domain 5: Security Program Management & Risk (20%)
+## Domain 5: Governance, Risk, and Compliance
 
-| Task | Status | Tools Used | Lab Notes | Artifacts / GitHub Link |
-|------|--------|------------|-----------|-------------------------|
-| Write a basic security policy for your lab | 🔲 | Markdown / PDF | | |
-| Perform a simple risk assessment | 🔲 | Risk matrix, CVSS | | |
-| Calculate CVSS score for a known vulnerability | 🔲 | CVSS calculator | | |
+| Lab | Status | Link |
+|-----|--------|------|
+| Windows Server Hardening | ✅ Complete | [BUILD_SERVER.md](./BUILD_SERVER.md)
 
 ---
 
-## 📁 How to Use
-- Keep this file updated in your GitHub lab repo.
-- Link each completed lab to its documentation (logs, screenshots, summaries).
-- Use this to show your hands-on knowledge to recruiters and hiring managers.
+## ✅ To-Do List
+
+- [ ] Set up Wazuh SIEM on separate Linux machine
+- [ ] Simulate brute-force and phishing attacks
+- [ ] Analyze traffic using Wireshark
+- [ ] Upload screenshots and logs from labs
 
 ---
+
+> ⚠️ All labs are performed in a secure, isolated lab environment for learning and demonstration purposes only.
 
 Happy hacking! 💻🔐
 
