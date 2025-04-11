@@ -16,6 +16,9 @@ To simulate real-world cybersecurity scenarios using a physical lab setup featur
 - **Target**: Windows Server 2025 (192.168.1.2)
 - **Network**: Isolated LAN (192.168.1.0/24)
 - **Tools Used**: Nmap, Metasploit, Wazuh, Sysmon, Windows Defender, Hydra, Enum4linux
+- ## 🖼️ Lab Network Diagram
+
+![Lab Network Diagram](./reports/lab_network_diagram.png)
 
 ---
 
