@@ -229,7 +229,7 @@ C:\WINDOWS\Explorer.EXE /NoUACCheck
 - User: NARNIA\Administrator
 - Indicates: Post-exploitation or elevated session
 
-📁 Evidence: [evid1.txt](/post_exploitation/event_logs/sysmon/evid1.txt)
+📁 Evidence: [evid1.txt](/post_exploitation/evid1.txt)
 
 ---
 
