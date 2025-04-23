@@ -51,9 +51,7 @@ This tracker maps hands-on labs in my home cybersecurity lab to the CompTIA Secu
 - Explore WMI or scheduled task payload execution
 - Capture more credentials using CrackMapExec or responder-based attacks
 
-**📄 Report:** [exploitation/reverse_shell/revshell_deployment_blocked.md](../exploitation/reverse_shell/revshell_deployment_blocked.md)
-
----
+**📄 Report:** https://github.com/olehstudycyber/Oleh-Borysovskyy/commit/fca4d4eea008af0366f47c7b22ca1d92dbc297bc
 
 
 ---
