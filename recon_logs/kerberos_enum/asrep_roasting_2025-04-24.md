@@ -19,3 +19,11 @@
 **Command:**
 ```bash
 kerbrute userenum --dc 192.168.1.2 -d narnia.com usernames.txt
+Result:
+
+pgsql
+Copy
+Edit
+[*] Valid user found: administrator@narnia.com
+[*] Valid user found: jdoe@narnia.com
+✅ 2 valid usernames identified
