@@ -44,6 +44,24 @@ This tracker maps hands-on labs in my home cybersecurity lab to the CompTIA Secu
 - **Blocked by Defender**: Execution blocked due to Defender identifying `revshell.exe` as a threat.
 
 **Outcome:** Reverse shell payload delivery succeeded; execution was blocked by Windows Defender. Target is aware of potential threats but lacks enhanced hardening.
+## 📅 2025-04-24 – Kerberos Enumeration & AS-REP Roasting
+
+**Target:** 192.168.1.2 (Windows Server 2025 – narnia.com)  
+**Tools Used:** `kerbrute`, `GetNPUsers.py (Impacket)`
+
+### ✅ Actions Completed:
+- Installed and configured `kerbrute` using Go
+- Enumerated valid domain users (administrator, jdoe)
+- Identified a user with **Kerberos pre-authentication disabled**
+- Successfully retrieved **AS-REP hash** for offline cracking
+- Logged output in:
+  - `recon_logs/kerberos_enum/kerbrute_userenum_2025-04-24.md`
+  - `recon_logs/kerberos_enum/asrep_roasting_2025-04-24.md`
+
+### 🔄 Next Steps:
+- Crack hash using `john` + `rockyou.txt`
+- Test credentials with `evil-winrm` or `smbclient`
+
 
 **Next Steps:**
 
