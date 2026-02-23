@@ -16,14 +16,15 @@ Focused on detecting and responding to Windows authentication attacks, endpoint 
 ## 🧪 Projects
 
 - **SOC Brute Force Investigation (Windows Event ID 4625)**  
-  Built and monitored a lab domain environment; detected RDP/SSH brute force attempts using Windows Security logs and Wazuh/Splunk, correlated failed logons by IP, account, and time, and documented findings and remediation steps.
+  Built and monitored a lab domain environment; detected RDP/SSH brute force attempts using Windows Security logs and Wazuh/Splunk, correlated failed logons by IP, account, and time, and documented findings and remediation steps to reduce attack surface and improve account lockout policies.
 
 - **TryHackMe SOC & Blue Team Labs – Level 0xC (Guru, 33k+ points)**  
-  Completed blue-team and SOC-focused rooms covering SIEM use, log analysis, incident handling, and Windows/network forensics. Applied ATT&CK techniques and mapped detections to tactics.
+  Completed blue-team and SOC-focused rooms covering SIEM use, log analysis, incident handling, and Windows/network forensics, applying ATT&CK techniques and mapping detections to tactics to simulate real SOC workflows.
 
 ## 🛠 Lab Environment
 
-- Home SOC Lab with Windows Server, Windows 10/11, Kali Linux
+- Home SOC lab with Windows Server and Windows 10/11 clients
+- Kali Linux and Ubuntu for offensive and administrative tasks
 - Wazuh/Splunk for centralized logging and alerting
 - Microsoft Defender and Windows native logging (Security, Sysmon)
 - Virtualization using Oracle VirtualBox/VMware
@@ -36,4 +37,3 @@ Actively seeking an **Entry-Level SOC Analyst** or **Cybersecurity Analyst** rol
 
 - LinkedIn: https://www.linkedin.com/in/oleh-borysovskyy-a2a65152/
 - TryHackMe: https://tryhackme.com/p/oleh7
-
