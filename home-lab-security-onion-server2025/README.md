@@ -1,103 +1,180 @@
-# Home Cyber Lab - Security Onion + Windows Server 2025
-
-**Author:** Oleh Borysovskyy
-**Started:** April 2026
-**Status:** Active Build - Domain Controller Live
+# Windows Server 2025 Active Directory Lab Environment  
+## Enterprise Systems Administration with Integrated Security Visibility
 
 ---
 
-## 1. Overview
-This repository documents a home cyber lab built for practicing systems administration and security monitoring.
+## Overview
 
-### Core Infrastructure
-*   **ASUS Laptop**: Windows 11 host running Security Onion (SIEM/IDS).
-*   **Dell Inspiron 7386**: Physical Windows 11 admin/client workstation.
-*   **Windows Server 2025**: Virtualized Domain Controller (AD DS, DNS, DHCP).
+This repository documents a Windows Server 2025 Active Directory lab environment built to simulate enterprise-scale systems administration tasks. The lab focuses on identity management, Windows infrastructure services, and administrative automation using PowerShell.
 
-### Goals
-*   Build Windows Server administration skills (Active Directory, Group Policy).
-*   Deploy and tune Security Onion for blue-team network monitoring.
-*   Generate and analyze realistic Windows event logs in a SIEM environment.
-*   Document a production-style SOC environment for career transition.
+The environment is designed to replicate core responsibilities of a **Junior Systems Administrator**, including domain services configuration, user and group management, Group Policy implementation, and endpoint integration.
+
+A secondary security visibility layer is included using Security Onion to observe network and authentication activity within the domain environment.
 
 ---
 
-## 2. Hardware and Roles
+### Primary Focus
+- Windows Server administration
+- Active Directory Domain Services (AD DS)
+- User, group, and computer management
+- Group Policy Object (GPO) configuration
+- PowerShell automation for administrative tasks
 
-### ASUS Laptop (Primary Host)
-| Field | Value |
-| :--- | :--- |
-| **Host OS** | Windows 11 |
-| **Hypervisor** | VMware Workstation Pro |
-| **Primary VM** | Security Onion (Zeek, Suricata, Elastic Stack) |
-| **Purpose** | Network monitoring and log analysis |
-
-### Dell Inspiron 7386 (Physical Client)
-| Field | Value |
-| :--- | :--- |
-| **Specs** | i7-8565U, 16 GB RAM |
-| **Role** | Admin workstation and SOC analyst endpoint |
-| **Status** | Successfully joined to `corp.local` domain |
-
-### Windows Server 2025 (VM)
-| Field | Value |
-| :--- | :--- |
-| **Hostname** | LAB-DC01 |
-| **Domain** | corp.local |
-| **Roles** | AD DS, DNS, DHCP |
+### Secondary Layer
+- Security Onion deployment for passive network monitoring
+- Log visibility of authentication and domain activity
+- Basic security-aware infrastructure observation
 
 ---
 
-## 3. Network Architecture
-The lab utilizes a dual-homed network design to balance internal domain traffic with external internet access.
+## Lab Architecture
 
-### IP Assignments
-| Device | Interface | IP Address | Subnet Mask | Gateway |
-| :--- | :--- | :--- | :--- | :--- |
-| **Security Onion** | VMnet8 (NAT) | 172.31.38.128| 255.255.255.0| 172.31.38.2|
-| **LAB-DC01** | Ethernet0 (NAT) | 172.31.38.50| 255.255.255.0| 172.31.38.2|
-| **LAB-DC01** | Ethernet1 (Bridge)| 172.20.123.90| 255.255.255.0| None|
-| **Dell Laptop** | Wi-Fi (Bridge) | 172.20.123.91| 255.255.255.0| 172.20.112.1|
+**Domain Environment**
+- Domain: `corp.local`
+- Domain Controller: Windows Server 2025 (LAB-DC01)
+- Client Machine: Windows 11 (Dell Inspiron)
 
----
+**Core Services**
+- Active Directory Domain Services (AD DS)
+- DNS (integrated with AD)
+- DHCP (lab scope configuration)
+- Group Policy Management
 
-## 4. Security Onion Configuration & Fixes
-
-### 4.1 Management Subnet Recovery
-*   **Problem**: SOC interface unreachable due to IP/subnet mismatch after installation.
-*   **Fix**: Updated VMware Virtual Network Editor to match the expected `172.31.38.0/24` subnet and verified services using `so-status`.
-
-### 4.2 Firewall Access
-*   **Problem**: Browser timed out when attempting to reach the Web UI.
-*   **Fix**: Used `so-firewall includehost analyst <HOST_IP>` to allow the host machine to access the analyst console.
+**Networking**
+- NAT + Bridged virtual network configuration
+- Internal domain communication between server and client systems
 
 ---
 
-## 5. Windows Server 2025 Build Log
+## Active Directory Administration
 
-### Session 1 - April 28, 2026
-*   Installed Windows Server 2025 Standard with Desktop Experience.
-*   Promoted to Domain Controller for `corp.local`.
-*   Created Organizational Units (OUs): `LabUsers`, `LabComputers`, `LabAdmins`.
-*   Provisioned test users: `jdoe`, `asmith`, `bwilson`, and `labadmin`.
+### Domain Structure
 
-### Session 2 - April 29, 2026
-*   **Dual-NIC Setup**: Configured Ethernet0 for NAT (Internet) and Ethernet1 for Bridged (LAN).
-*   **Internet Access**: Resolved routing by configuring DNS Forwarders (8.8.8.8) and setting interface metrics.
-*   **Connectivity Fix**: Standardized subnet masks across all lab devices to `255.255.255.0` and explicitly bound VMnet0 to the physical Wi-Fi adapter.
-*   **Success**: Physical Dell Laptop successfully joined the `corp.local` domain.
+The following Organizational Units (OUs) were created to simulate a structured enterprise environment:
+
+- **LabUsers** – Standard user accounts by role/department
+- **LabComputers** – Domain-joined endpoint devices
+- **LabAdmins** – Privileged administrative accounts
 
 ---
 
-## 6. Integration & Career Goals
+### User & Group Management
 
-### Roadmap
-1.  **Phase 1 (Identity)**: Implement GPOs for account lockouts and password complexity.
-2.  **Phase 2 (Monitoring)**: Deploy Sysmon and forward Windows event logs to Security Onion.
-3.  **Phase 3 (Simulation)**: Conduct Nmap scans and brute-force simulations to test SIEM alerting.
+Test accounts were created to simulate real-world IT administration workflows:
 
-### Career Alignment
-This lab serves as a portfolio project for transitioning to **SOC Analyst** or **Systems Administrator** roles by demonstrating hands-on experience in AD administration, SIEM deployment, and incident response.
+- Standard users:
+  - jdoe
+  - asmith
+  - bwilson
+
+- Administrative account:
+  - labadmin (Domain Admins group)
 
 ---
-*Last Updated: April 29, 2026*
+
+### Completed Administrative Tasks
+
+- Domain Controller promotion (LAB-DC01)
+- Active Directory Domain Services (AD DS) installation
+- DNS role configuration with external forwarders (8.8.8.8)
+- Windows 11 client successfully joined to domain
+- Organizational Unit (OU) structure implementation
+- Basic user and group creation via GUI and PowerShell
+
+---
+
+### In Progress
+
+- Group Policy Object (GPO) configuration:
+  - Password policy enforcement
+  - Account lockout policy
+  - Desktop restriction policies
+
+- PowerShell automation:
+  - Bulk user provisioning from CSV
+  - Automated group assignment scripts
+
+- Backup and recovery simulation for Active Directory
+
+---
+
+## PowerShell Automation
+
+This lab includes PowerShell scripts to simulate real IT administrative workflows.
+
+Planned scripts include:
+
+- `New-BulkUsers.ps1` – Bulk creation of AD users from CSV
+- `Add-UsersToGroups.ps1` – Automated group membership assignment
+- `Reset-LabPasswords.ps1` – Password reset automation for test accounts
+
+These scripts demonstrate infrastructure automation and administrative efficiency.
+
+---
+
+## Group Policy Configuration
+
+Group Policy Objects are used to simulate enterprise endpoint control and security policies.
+
+Planned GPO implementations:
+
+- Password complexity and expiration policies
+- Account lockout thresholds
+- Control Panel and system restriction policies
+- Network drive mapping for domain users
+
+---
+
+## Security Visibility Layer (Security Onion)
+
+Security Onion is deployed as a supplemental monitoring tool within the lab environment.
+
+It is used to:
+- Observe authentication activity within the domain
+- Monitor network traffic between server and client systems
+- Provide log visibility into Active Directory operations
+
+This layer is used for **observability purposes only** and is not the primary focus of the lab.
+
+---
+
+## Key Skills Demonstrated
+
+- Active Directory Domain Services (AD DS) administration
+- Windows Server 2025 configuration and management
+- DNS and DHCP infrastructure services
+- Group Policy Object (GPO) design and deployment
+- PowerShell-based user and system automation
+- Domain-joined client troubleshooting
+- Basic network monitoring and log analysis
+
+---
+
+## Career Alignment
+
+This project is aligned with entry-level and junior-level infrastructure roles:
+
+- Junior Systems Administrator
+- Windows Server Administrator
+- IT Systems Administrator
+- Infrastructure Support Engineer
+
+The lab demonstrates practical experience with enterprise Windows environments, identity management systems, and administrative automation workflows.
+
+---
+
+## Next Development Phase
+
+Planned enhancements to this environment:
+
+1. Expand Group Policy implementation to simulate corporate IT policy enforcement
+2. Build full PowerShell-based user lifecycle management system
+3. Introduce controlled break/fix scenarios (password lockouts, DNS misconfigurations)
+4. Document troubleshooting workflows as case studies
+5. Expand Security Onion visibility for deeper network observation
+
+---
+
+## Repository Purpose
+
+This repository serves as a structured demonstration of hands-on Windows systems administration skills, replicating real-world enterprise IT infrastructure and operational workflows.
